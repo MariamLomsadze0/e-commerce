@@ -1,0 +1,51 @@
+<div class="login-page">
+  <div class="login-container">
+    <div class="image-section">
+      <img src="assets/login.png" alt="Fashionable Women" />
+    </div>
+    <div class="form-section" style="font-family: 'CoreSansC'; font-weight: bold;">
+      <h2>Sign In Page</h2>
+      
+      <button class="social-login google-login">Continue With Google</button>
+      <button class="social-login twitter-login">Continue With Twitter</button>
+      
+      <div class="divider">
+        <span>OR</span>
+      </div>
+      
+      <form (submit)="onSubmit()">
+        <label for="email">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="Enter your email" 
+          [(ngModel)]="email" 
+          name="email" 
+          required 
+        />
+        
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Enter your password" 
+            [(ngModel)]="password" 
+            name="password" 
+            required 
+          />
+        </div>
+        
+        <a href="#" class="forgot-password">Forgot your password?</a>
+        
+        <div class="InputMessage" *ngIf="message" [ngStyle]="{color: 'red', 'margin-bottom.px': 4}">
+          {{ message }}
+        </div>
+        
+        <button type="submit" class="sign-in">Sign In</button>
+      </form>
+      
+      <p>Don’t have an account? <a href="register">Sign up</a></p>
+    </div>
+  </div>
+</div>

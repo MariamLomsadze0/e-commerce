@@ -1,0 +1,59 @@
+<div class="cart-page">
+  <div class="breadcrumb">
+    <span>Home</span> &gt; <span>Add To Cart</span>
+  </div>
+  <p>
+    Please fill in the fields below and click place order to complete your purchase!<br />
+    Already registered? <a href="/login">Please login here</a>
+  </p>
+
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Product Details</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Shipping</th>
+        <th>Subtotal</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>
+          <img [src]="item.image" alt="{{ item.name }}" />
+          <div>
+            <p class="product-name">{{ item.name }}</p>
+            <p>Color: {{ item.color }}</p>
+            <p>Size: {{ item.size }}</p>
+          </div>
+        </td>
+        <td>{{ item.price | currency }}</td>
+        <td>
+          <button (click)="decreaseQuantity(item)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(item)">+</button>
+        </td>
+        <td>{{ item.shipping === 'FREE' ? 'FREE' : (item.shipping | currency) }}</td>
+        <td>{{ item.subtotal | currency }}</td>
+        <td>
+          <button class="delete" (click)="removeItem(item)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cart-actions">
+    <div>
+      <label for="coupon">Discount Codes</label>
+      <input id="coupon" placeholder="Enter your coupon code" />
+      <button (click)="applyCoupon()">Apply Coupon</button>
+    </div>
+    <div class="totals">
+      <p>Sub Total: {{ subTotal | currency }}</p>
+      <p>Shipping: {{ shippingTotal | currency }}</p>
+      <p>Grand Total: {{ grandTotal | currency }}</p>
+      <button class="checkout" (click)="proceedToCheckout()">Proceed To Checkout</button>
+    </div>
+  </div>
+</div>

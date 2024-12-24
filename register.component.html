@@ -1,0 +1,41 @@
+<div class="signup-page">
+    <div class="singup-container">
+      <div class="image-section">
+        <img src="assets/signup.png" alt="signup" />
+      </div>
+      
+      <div class="form-section" style="font-family: 'CoreSansC'; font-weight: bold;">
+        <h2>Sign Up </h2>
+        <p>Sign up for free to access to in any of our products </p>
+        
+        <button class="social-login google-login">Sign up with Google</button>
+        <button class="social-login twitter-login">Continue With Twitter</button>
+        
+        <form (submit)="onSubmit()">
+          <label for="email" style="margin-top: 20px;">Email Address</label>
+          <div class="InputField">
+            <input type="email" id="email" placeholder="" [(ngModel)]="email" name="email" required />
+          </div>
+  
+          <label for="password" style="margin-top: 10px;">Password</label>
+          <div class="InputField">
+            <input type="password" id="password" placeholder="" [(ngModel)]="password" name="password" required />
+          </div>
+  
+          <div class="InputMessage" *ngIf="errorMessage" [ngStyle]="{color: 'red', 'margin-bottom.px': 10}">
+            {{ errorMessage }}
+          </div>
+          
+          <button type="submit" class="sign-up" style="height: fit-content;">Sign Up</button>
+        </form>
+        
+        <div class="LogInSection">
+          <div class="HaveAccount">Already have an Account? <a href="/login" class="link-info">Log in</a></div>
+
+        </div>
+      </div>
+    </div>
+  
+    
+  </div>
+  

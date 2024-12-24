@@ -1,0 +1,150 @@
+
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+
+
+.singup-container {
+  display: flex;
+  width: 70%;
+  max-width: 1200px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-section {
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h2 {  
+  margin-right: 300px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+p{
+  font-weight: 100;
+  margin-top: -20px;
+  margin-right: 79px;
+  margin-bottom: 60px;
+}
+
+.social-login {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.google-login {
+  background-color: transparent;
+  color: #8A33FD;
+}
+
+.twitter-login {
+  background-color: transparent;
+  color: #1DA1F2;
+}
+
+.google-login:hover,
+.twitter-login:hover {
+  background-color: #f9f9f9;
+}
+
+
+.twitter-login:hover,
+.google-login:hover {
+  background-color: #f9f9f9;
+}
+
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.InputMessage {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: red;
+  text-align: center;
+}
+
+.sign-up {
+  background-color: #8A33FD;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  width: 35%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.sign-in:hover {
+  background-color: #5a54d8;
+}
+
+.LogInSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.HaveAccount {
+  margin-right: 220px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.HaveAccount a {
+  color: #8A33FD;
+  text-decoration: none;
+}
+
+.HaveAccount a:hover {
+  text-decoration: underline;
+}
